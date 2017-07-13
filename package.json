@@ -1,0 +1,44 @@
+{
+  "name": "botfuel-nlp-sdk",
+  "version": "0.0.1",
+  "description": "NLP web services wrapper for Node.js",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Botfuel/botfuel-nlp-sdk.git"
+  },
+  "bugs": "https://github.com/Botfuel/botfuel-nlp-sdk/issues",
+  "main": "index.js",
+  "files": [
+    "jpm.json",
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "npm run compile",
+    "compile": "babel src --out-dir build",
+    "test": "npm run lint"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.6.0",
+    "babel-core": "^6.6.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-react": "^7.1.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.6.1",
+    "request": "^2.79.0",
+    "request-promise-native": "^1.0.3",
+    "url-join": "^2.0.2"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
