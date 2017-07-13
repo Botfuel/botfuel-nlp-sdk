@@ -5,13 +5,11 @@ import ApiResource from './api-resource';
 
 class Sentiment extends ApiResource {
 
-  compute(message) {
+  compute({ sentence }) {
     const options = {
       method: 'GET',
       uri: config.SENTIMENT_API,
-      qs: {
-        sentence: message.body,
-      },
+      qs: { sentence },
       headers: this.headers,
     };
 

@@ -15,9 +15,9 @@ Environment variables:
 ## How to use
 
 With babel:
-```
+```node.js
 import SpellCheck from './resources/spellcheck';
 
 const spellChecker = new SpellCheck({ appId: 'myAppId', appKey: 'myAppKey' });
-spellChecker.compute({ body: 'you aer bad' }, 'EN_1').then(console.log);
+spellChecker.compute({ sentence: 'you aer bad' , key: 'EN_1'}).then(console.log);
 ```

@@ -4,7 +4,7 @@ const baseConfig = {
   PROXY_HOST: process.env.PROXY_HOST || 'https://api.botfuel.io',
   SPELLCHECK_ROUTE: '/spellchecker',
   SENTIMENT_ROUTE: '/sentiment',
-  ENT_EXT_ROUTE: '/entity-extraction',
+  ENTEXT_ROUTE: '/entity-extraction',
 };
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
   SENTIMENT_API: urlJoin(
     baseConfig.SENTIMENT_HOST || baseConfig.PROXY_HOST, baseConfig.SENTIMENT_ROUTE
   ),
-  ENT_EXT_API: urlJoin(
-    baseConfig.ENT_EXT_HOST || baseConfig.PROXY_HOST, baseConfig.ENT_EXT_ROUTE
+  ENTEXT_API: urlJoin(
+    baseConfig.ENTEXT_HOST || baseConfig.PROXY_HOST, baseConfig.ENTEXT_ROUTE
   ),
 };

@@ -4,16 +4,12 @@ import ApiResource from './api-resource';
 
 
 export default class SpellCheck extends ApiResource {
-  compute(message, dictionaryKey) {
-    console.log(this.headers);
+  compute({ sentence, key }) {
     const options = {
       method: 'GET',
       rejectUnauthorized: false,
       uri: config.SPELLCHECK_API,
-      qs: {
-        sentence: message.body,
-        key: dictionaryKey,
-      },
+      qs: { sentence, key },
       headers: this.headers,
     };
     return rp(options);

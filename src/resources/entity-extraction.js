@@ -3,21 +3,15 @@ import config from '../config';
 import ApiResource from './api-resource';
 
 
-class EntityExtraction extends ApiResource {
+export default class EntityExtraction extends ApiResource {
 
-  compute(message, locale, entities) {
+  compute({ sentence, locale, entities }) {
     const options = {
       method: 'GET',
-      uri: config.ENT_EXT_API,
-      qs: {
-        sentence: message.body,
-        locale,
-        entities,
-      },
+      uri: config.ENTEXT_API,
+      qs: { sentence, locale, entities },
       headers: this.headers,
     };
     return rp(options);
   }
 }
-
-module.exports = EntityExtraction;
