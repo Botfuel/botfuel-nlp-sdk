@@ -13,10 +13,10 @@ npm install --save botfuel-nlp-sdk
 ```
 
 Environment variables:
-- `PROXY_HOST`: Botfuel proxy host (default to: `https://api.botfuel.io`).
-- `SPELLCHECKING_HOST`: spellchecking api host (default to `$PROXY_HOST`)
-- `SENTIMENT_ANALYSIS_HOST`: sentiment analysis api host (default to `$PROXY_HOST`)
-- `ENTITY_EXTRACTION_HOST`: entity extraction api host (default to `$PROXY_HOST`)
+- `BOTFUEL_PROXY_HOST`: Botfuel proxy host (default to: `https://api.botfuel.io`);
+- `BOTFUEL_SPELLCHECKING_HOST`: spellchecking api host (default to `$PROXY_HOST`);
+- `BOTFUEL_SENTIMENT_ANALYSIS_HOST`: sentiment analysis api host (default to `$PROXY_HOST`);
+- `BOTFUEL_ENTITY_EXTRACTION_HOST`: entity extraction api host (default to `$PROXY_HOST`).
 
 ## How to use
 
