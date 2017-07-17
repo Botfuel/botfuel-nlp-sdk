@@ -22,10 +22,10 @@ Environment variables:
 
 - Spell checking:
 ```node.js
-const { SpellChecking } = require('botfuel-nlp-sdk');
+const { Spellchecking } = require('botfuel-nlp-sdk');
 
-const spellChecker = new SpellChecking({appId: 'myAppId', appKey: 'myAppKey'});
-spellChecker.compute({ sentence: 'you aer bad', key: 'EN_1'}).then(console.log);
+const spellchecker = new Spellchecking({appId: 'myAppId', appKey: 'myAppKey'});
+spellchecker.compute({ sentence: 'you aer bad', key: 'EN_1'}).then(console.log);
 ```
 
 - Sentiment analysis:
@@ -41,5 +41,5 @@ sentimentAnalyzer.compute({ sentence: 'you are bad' }).then(console.log);
 const { EntityExtraction } = require('botfuel-nlp-sdk');
 
 const entityExtractor = new EntityExtraction({appId: 'myAppId', appKey: 'myAppKey'});
-entityExtractor.compute({ sentence: 'Today, you are bad', locale: 'EN_1'}).then(console.log);
+entityExtractor.compute({ sentence: 'Today, you are bad', locale: 'en'}).then(console.log);
 ```

@@ -2,9 +2,9 @@ const urlJoin = require('url-join');
 
 const baseConfig = {
   PROXY_HOST: process.env.BOTFUEL_PROXY_HOST || 'https://api.botfuel.io',
-  SPELLCHECKING_ROUTE: '/spellchecking',
+  SPELLCHECKING_ROUTE: '/nlp/spellchecking',
   SENTIMENT_ANALYSIS_ROUTE: '/nlp/sentiment-analysis',
-  ENTITY_EXTRACTION_ROUTE: '/entity-extraction',
+  ENTITY_EXTRACTION_ROUTE: '/nlp/entity-extraction',
 };
 
 module.exports = {
