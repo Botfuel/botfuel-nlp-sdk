@@ -1,9 +1,9 @@
 # botfuel-nlp-sdk
 
 NLP web services wrapper for Node.js, includes:
-- [SpellChecking](src/resources/spellchecking);
-- [Sentiment analysis](src/resources/sentiment-analysis);
-- [Entity extraction](src/resources/entity-extraction).
+- [Spell checking](src/resources/spellchecking.js);
+- [Sentiment analysis](src/resources/sentiment-analysis.js);
+- [Entity extraction](src/resources/entity-extraction.js).
 
 ## How to setup
 
