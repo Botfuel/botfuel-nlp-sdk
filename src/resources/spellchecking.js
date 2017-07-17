@@ -3,12 +3,12 @@ import config from '../config';
 import ApiResource from './api-resource';
 
 
-export default class SpellCheck extends ApiResource {
+export default class Spellchecking extends ApiResource {
   compute({ sentence, key }) {
     const options = {
       method: 'GET',
       rejectUnauthorized: false,
-      uri: config.SPELLCHECK_API,
+      uri: config.SPELLCHECKING_API,
       qs: { sentence, key },
       headers: this.headers,
     };

@@ -8,7 +8,8 @@ export default class EntityExtraction extends ApiResource {
   compute({ sentence, locale, entities }) {
     const options = {
       method: 'GET',
-      uri: config.ENTEXT_API,
+      rejectUnauthorized: false,
+      uri: config.ENTITY_EXTRACTION_API,
       qs: { sentence, locale, entities },
       headers: this.headers,
     };
