@@ -3,15 +3,19 @@ import config from '../config';
 import ApiResource from './api-resource';
 
 
-export default class SpellCheck extends ApiResource {
-  compute({ sentence, key }) {
+class SentimentAnalysis extends ApiResource {
+
+  compute({ sentence }) {
     const options = {
       method: 'GET',
       rejectUnauthorized: false,
-      uri: config.SPELLCHECK_API,
-      qs: { sentence, key },
+      uri: config.SENTIMENT_ANALYSIS_API,
+      qs: { sentence },
       headers: this.headers,
     };
+
     return rp(options);
   }
 }
+
+module.exports = SentimentAnalysis;

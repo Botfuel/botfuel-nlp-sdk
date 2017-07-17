@@ -1,23 +1,45 @@
 # botfuel-nlp-sdk
 
-NLP web services wrapper for Node.js
+NLP web services wrapper for Node.js, includes:
+- [SpellChecking](src/resources/spellchecking);
+- [Sentiment analysis](src/resources/sentiment-analysis);
+- [Entity extraction](src/resources/entity-extraction).
 
 ## How to setup
 
-Install:
-```
+Install using npm:
+```shell
 npm install --save botfuel-nlp-sdk
 ```
 
 Environment variables:
 - `PROXY_HOST`: Botfuel proxy host (default to: `https://api.botfuel.io`).
+- `SPELLCHECKING_HOST`: spellchecking api host (default to `$PROXY_HOST`)
+- `SENTIMENT_ANALYSIS_HOST`: sentiment analysis api host (default to `$PROXY_HOST`)
+- `ENTITY_EXTRACTION_HOST`: entity extraction api host (default to `$PROXY_HOST`)
 
 ## How to use
 
-With babel:
+- Spell checking:
 ```node.js
-import SpellCheck from './resources/spellcheck';
+const { SpellChecking } = require('botfuel-nlp-sdk');
 
-const spellChecker = new SpellCheck({ appId: 'myAppId', appKey: 'myAppKey' });
-spellChecker.compute({ sentence: 'you aer bad' , key: 'EN_1'}).then(console.log);
+const spellChecker = new SpellChecking({appId: 'myAppId', appKey: 'myAppKey'});
+spellChecker.compute({ sentence: 'you aer bad', key: 'EN_1'}).then(console.log);
+```
+
+- Sentiment analysis:
+```node.js
+const { SentimentAnalysis } = require('botfuel-nlp-sdk');
+
+const sentimentAnalyzer = new SentimentAnalysis({appId: 'myAppId', appKey: 'myAppKey'});
+sentimentAnalyzer.compute({ sentence: 'you are bad' }).then(console.log);
+```
+
+- Entity extraction:
+```node.js
+const { EntityExtraction } = require('botfuel-nlp-sdk');
+
+const entityExtractor = new EntityExtraction({appId: 'myAppId', appKey: 'myAppKey'});
+entityExtractor.compute({ sentence: 'Today, you are bad', locale: 'EN_1'}).then(console.log);
 ```
