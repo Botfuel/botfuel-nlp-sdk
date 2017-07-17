@@ -4,7 +4,7 @@ const baseConfig = {
   PROXY_HOST: process.env.PROXY_HOST || 'https://api.botfuel.io',
   SPELLCHECKING_ROUTE: '/spellchecking',
   SENTIMENT_ANALYSIS_ROUTE: '/nlp/sentiment-analysis',
-  ENTITY_EXT_ROUTE: '/entity-extraction',
+  ENTITY_EXTRACTION_ROUTE: '/entity-extraction',
 };
 
 module.exports = {
