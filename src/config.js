@@ -8,16 +8,15 @@ const baseConfig = {
 };
 
 module.exports = {
-  SPELLCHECKING_API: urlJoin(
-    process.env.BOTFUEL_SPELLCHECKING_HOST ||
-    baseConfig.PROXY_HOST, baseConfig.SPELLCHECKING_ROUTE
-  ),
-  SENTIMENT_ANALYSIS_API: urlJoin(
-    process.env.BOTFUEL_SENTIMENT_ANALYSIS_HOST ||
-    baseConfig.PROXY_HOST, baseConfig.SENTIMENT_ANALYSIS_ROUTE
-  ),
-  ENTITY_EXTRACTION_API: urlJoin(
-    process.env.BOTFUEL_ENTITY_EXTRACTION_HOST ||
-    baseConfig.PROXY_HOST, baseConfig.ENTITY_EXTRACTION_ROUTE
-  ),
+  SPELLCHECKING_API:
+    process.env.BOTFUEL_SPELLCHECKING_API_URL ||
+    urlJoin(baseConfig.PROXY_HOST, baseConfig.SPELLCHECKING_ROUTE),
+
+  SENTIMENT_ANALYSIS_API:
+    process.env.BOTFUEL_SENTIMENT_ANALYSIS_API_URL ||
+    urlJoin(baseConfig.PROXY_HOST, baseConfig.SENTIMENT_ANALYSIS_ROUTE),
+
+  ENTITY_EXTRACTION_API:
+    process.env.BOTFUEL_ENTITY_EXTRACTION_API_URL ||
+    urlJoin(baseConfig.PROXY_HOST, baseConfig.ENTITY_EXTRACTION_ROUTE),
 };
