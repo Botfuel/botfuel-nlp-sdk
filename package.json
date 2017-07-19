@@ -1,6 +1,6 @@
 {
   "name": "botfuel-nlp-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NLP web services wrapper for Node.js",
   "author": "",
   "repository": {
@@ -9,7 +9,9 @@
   },
   "bugs": "https://github.com/Botfuel/botfuel-nlp-sdk/issues",
   "main": "index.js",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "prepublish": "npm run compile",
     "compile": "babel src --out-dir build",
