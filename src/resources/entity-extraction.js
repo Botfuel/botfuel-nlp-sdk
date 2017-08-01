@@ -1,4 +1,3 @@
-import rp from 'request-promise-native';
 import config from '../config';
 import ApiResource from './api-resource';
 
@@ -16,7 +15,6 @@ export default class EntityExtraction extends ApiResource {
   }) {
     const options = {
       method: 'GET',
-      rejectUnauthorized: false,
       uri: config.ENTITY_EXTRACTION_API,
       // Needed so that arrays are serialized to foo=bar&foo=baz
       // Instead of foo[0]=bar&foo[1]=baz
@@ -33,8 +31,7 @@ export default class EntityExtraction extends ApiResource {
         uni: unicode,
         latent,
       },
-      headers: this.headers,
     };
-    return rp(options);
+    return this.rp(options);
   }
 }

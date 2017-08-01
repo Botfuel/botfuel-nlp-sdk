@@ -1,5 +1,17 @@
+import rp from 'request-promise-native';
+
 export default class ApiResource {
   constructor({ appId, appKey }) {
-    this.headers = { 'App-Id': appId, 'App-Key': appKey };
+    const baseOptions = {
+      headers: { 'App-Id': appId, 'App-Key': appKey },
+      rejectUnauthorized: false,
+      json: true,
+    };
+
+    this.rp = options =>
+      rp({
+        ...baseOptions,
+        ...options,
+      });
   }
 }
