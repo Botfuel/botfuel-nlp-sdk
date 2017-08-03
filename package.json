@@ -2,7 +2,7 @@
   "name": "botfuel-nlp-sdk",
   "version": "1.0.2",
   "description": "NLP web services wrapper for Node.js",
-  "author": "",
+  "author": "Botfuel",
   "repository": {
     "type": "git",
     "url": "https://github.com/Botfuel/botfuel-nlp-sdk.git"
@@ -17,7 +17,6 @@
     "compile": "babel src --out-dir build",
     "test": "npm run lint"
   },
-  "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.6.0",
     "babel-core": "^6.6.0",
