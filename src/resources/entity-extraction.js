@@ -26,9 +26,9 @@ export default class EntityExtraction extends ApiResource {
         dimensions,
         antidimensions,
         timezone,
-        cap: case-sensitive,
-        quo: keep-quotes,
-        uni: keep-accents,
+        case-sensitive,
+        keep-quotes,
+        keep-accents,
         latent,
       },
     };
