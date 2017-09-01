@@ -8,9 +8,9 @@ export default class EntityExtraction extends ApiResource {
     dimensions,
     antidimensions,
     timezone,
-    case-sensitive,
-    keep-quotes,
-    keep-accents,
+    case_sensitive,
+    keep_quotes,
+    keep_accents,
     latent,
   }) {
     const options = {
@@ -26,9 +26,9 @@ export default class EntityExtraction extends ApiResource {
         dimensions,
         antidimensions,
         timezone,
-        case-sensitive,
-        keep-quotes,
-        keep-accents,
+        case_sensitive,
+        keep_quotes,
+        keep_accents,
         latent,
       },
     };
