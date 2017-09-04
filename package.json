@@ -1,6 +1,6 @@
 {
   "name": "botfuel-nlp-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "NLP web services wrapper for Node.js",
   "author": "Botfuel",
   "repository": {
