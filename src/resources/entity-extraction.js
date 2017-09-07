@@ -11,7 +11,6 @@ export default class EntityExtraction extends ApiResource {
     case_sensitive,
     keep_quotes,
     keep_accents,
-    latent,
   }) {
     const options = {
       method: 'GET',
@@ -29,7 +28,6 @@ export default class EntityExtraction extends ApiResource {
         case_sensitive,
         keep_quotes,
         keep_accents,
-        latent,
       },
     };
     return this.rp(options);
