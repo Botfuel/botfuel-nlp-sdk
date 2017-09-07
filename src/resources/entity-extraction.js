@@ -11,7 +11,6 @@ export default class EntityExtraction extends ApiResource {
     case_sensitive,
     keep_quotes,
     keep_accents,
-    latent,
   }) {
     const options = {
       method: 'GET',
@@ -20,7 +19,7 @@ export default class EntityExtraction extends ApiResource {
       // Instead of foo[0]=bar&foo[1]=baz
       // (dimensions for example)
       useQuerystring: true,
-      qs: {
+      qs: JSON.parse(JSON.stringify({
         sentence,
         locale,
         dimensions,
@@ -29,8 +28,7 @@ export default class EntityExtraction extends ApiResource {
         case_sensitive,
         keep_quotes,
         keep_accents,
-        latent,
-      },
+      })),
     };
     return this.rp(options);
   }
