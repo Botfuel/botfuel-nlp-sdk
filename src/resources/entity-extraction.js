@@ -4,7 +4,6 @@ import ApiResource from './api-resource';
 export default class EntityExtraction extends ApiResource {
   compute({
     sentence,
-    locale,
     dimensions,
     antidimensions,
     timezone,
@@ -21,7 +20,6 @@ export default class EntityExtraction extends ApiResource {
       useQuerystring: true,
       qs: {
         sentence,
-        locale,
         dimensions,
         antidimensions,
         timezone,
