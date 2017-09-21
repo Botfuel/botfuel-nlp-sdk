@@ -9,13 +9,14 @@ export default class ApiResource {
    * @static
    * @memberof ApiResource
    */
-  static cleanParameters = params =>
-    Object.keys(params).reduce((returns, element) => {
+  static cleanParameters(params) {
+    return Object.keys(params).reduce((returns, element) => {
       if (params[element] !== undefined) {
         return { ...returns, [element]: params[element] };
       }
       return returns;
     }, {});
+  }
 
   constructor({ appId, appKey }) {
     const baseOptions = {
