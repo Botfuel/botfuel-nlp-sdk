@@ -6,7 +6,7 @@ class SentimentAnalysis extends ApiResource {
     const options = {
       method: 'GET',
       uri: config.SENTIMENT_ANALYSIS_API,
-      qs: { sentence },
+      qs: this.constructor.cleanParameters({ sentence }),
     };
 
     return this.rp(options);
