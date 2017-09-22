@@ -6,7 +6,7 @@ export default class Spellchecking extends ApiResource {
     const options = {
       method: 'GET',
       uri: config.SPELLCHECKING_API,
-      qs: this.constructor.cleanParameters({ sentence, key }),
+      qs: { sentence, key },
     };
     return this.rp(options);
   }

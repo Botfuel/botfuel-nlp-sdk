@@ -9,14 +9,13 @@ export default class ApiResource {
    * @static
    * @memberof ApiResource
    */
-  static cleanParameters(params) {
-    return Object.keys(params).reduce((returns, element) => {
+  static cleanParameters = params =>
+    Object.keys(params).reduce((returns, element) => {
       if (params[element] !== undefined) {
         return { ...returns, [element]: params[element] };
       }
       return returns;
     }, {});
-  }
 
   constructor({ appId, appKey }) {
     const baseOptions = {
@@ -29,6 +28,8 @@ export default class ApiResource {
       rp({
         ...baseOptions,
         ...options,
+        ...(options.qs && { qs: this.constructor.cleanParameters(options.qs) }),
+        ...(options.body && { body: this.constructor.cleanParameters(options.body) }),
       });
   }
 }

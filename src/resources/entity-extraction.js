@@ -18,7 +18,7 @@ export default class EntityExtraction extends ApiResource {
       // Instead of foo[0]=bar&foo[1]=baz
       // (dimensions for example)
       useQuerystring: true,
-      qs: this.constructor.cleanParameters({
+      qs: {
         sentence,
         dimensions,
         antidimensions,
@@ -26,7 +26,7 @@ export default class EntityExtraction extends ApiResource {
         case_sensitive,
         keep_quotes,
         keep_accents,
-      }),
+      },
     };
     return this.rp(options);
   }
