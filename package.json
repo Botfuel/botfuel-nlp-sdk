@@ -2,6 +2,7 @@
   "name": "botfuel-nlp-sdk",
   "version": "1.1.1",
   "description": "NLP web services wrapper for Node.js",
+  "license": "Apache-2.0",
   "author": "Botfuel",
   "repository": {
     "type": "git",
