@@ -2,7 +2,12 @@
   "name": "botfuel-nlp-sdk",
   "version": "1.1.1",
   "description": "NLP web services wrapper for Node.js",
-  "author": "Botfuel",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Botfuel",
+    "email": "hi@botfuel.io",
+    "url": "https://www.botfuel.io"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Botfuel/botfuel-nlp-sdk.git"

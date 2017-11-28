@@ -37,3 +37,7 @@ const { EntityExtraction } = require('botfuel-nlp-sdk');
 const entityExtractor = new EntityExtraction({appId: 'myAppId', appKey: 'myAppKey'});
 entityExtractor.compute({ sentence: 'Today, you are bad', locale: 'en'}).then(console.log);
 ```
+
+## License
+
+See the [LICENSE](LICENSE.md) file.
