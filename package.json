@@ -40,8 +40,5 @@
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3",
     "url-join": "^2.0.2"
-  },
-  "engines": {
-    "node": ">=8.0"
   }
 }
